@@ -373,7 +373,7 @@ def multi():
     global fname
     global endk
     global endc
-    fname = upload_file.rstrip("pdf").rstrip("PDF").rstrip(".")+str("_output")+str(".xlsx")
+    #fname = upload_file.rstrip("pdf").rstrip("PDF").rstrip(".")+str("_output")+str(".xlsx")
     #fname="testing pdf"
     writer = pd.ExcelWriter(fname,engine='xlsxwriter')
     for i in range(len(rowss)):
