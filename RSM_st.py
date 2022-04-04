@@ -383,8 +383,8 @@ def multi():
         dfs = s[i]
         # csv = convert_df(dfs)
         # df_xlsx = to_excel(df)
-        # st.write(dfs)
-        # st.download_button(label="📥 Download data as CSV",data=to_excel(s[i]),file_name='pdf_output.csv' ,mime='text/csv',)
+        st.write(dfs)
+        st.download_button(label="📥 Download data as CSV",data=to_excel(s[i]),file_name='pdf_output.csv' ,mime='text/csv',)
 
         s[i].to_excel(writer,sheet_name=he[0:25],header=None,index=False)
     writer.save()
