@@ -199,7 +199,7 @@ def extract(header,ending_key,ending_column):
      "keep_blank_chars": True,}
     # box= []
     page = []
-    pdf = pdfplumber.open(fpath)
+    pdf = pdfplumber.open(upload_file)
     for i in page_cnt:
         
         text = pdf.pages[i].extract_words(use_text_flow=True,keep_blank_chars=True)
