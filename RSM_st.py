@@ -32,7 +32,7 @@ sys.path.append(os.getcwd())
 def to_excel(df):
     output = BytesIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
-    df.to_excel(writer,index=False, sheet_name='Sheet1')
+    df.to_excel(writer,header=None,index=False, sheet_name='Sheet1')
     workbook = writer.book
     worksheet = writer.sheets['Sheet1']
     format1 = workbook.add_format({'num_format': '0.00'}) 
@@ -51,7 +51,7 @@ def to_excel(df):
 # sys.path.append(os.getcwd())
 def convert_df(df):
      # IMPORTANT: Cache the conversion to prevent computation on every rerun
-     return df.to_csv(header=None,index=False,errors='ignore').encode('utf-8')
+     return df.to_csv(index=False,errors='ignore').encode('utf-8')
 # def convert_df2(df):
 #      # IMPORTANT: Cache the conversion to prevent computation on every rerun
 #      return df.to_csv(index=False,encoding='utf-8',errors='ignore')
